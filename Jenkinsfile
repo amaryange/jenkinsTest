@@ -6,11 +6,15 @@ pipeline {
         NOTIFICATION_EMAIL = 'melessangekevin@gmail.com'
     }
 
+    tools {
+        maven 'maven_3_9_5'
+    }
+
     stages {
 
         stage('Build') {
             steps {
-                sh 'mvn install'
+                sh 'mvn clean install'
             }
         }
 
