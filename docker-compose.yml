@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  myapp:
+    container_name: cicd
+    build: .
+    ports:
+      - "9090:9090"
