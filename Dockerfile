@@ -1,5 +1,5 @@
 # Utilise l'image openjdk:latest comme base
-FROM openjdk:21-jdk-alpine
+FROM openjdk:11-jdk-alpine
 
 # Crée un répertoire pour l'application
 RUN mkdir /app
