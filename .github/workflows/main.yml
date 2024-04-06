@@ -20,8 +20,12 @@ jobs:
           java-version: 11
 
       - name: Build Application
-        run: |
-          mvn clean
-          mvn -B package --file pom.xml 
+        run: mvn -f pom.xml clean package
+
+      - name: Upload Maven build artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: artifact
+            path: ./target/cicd-0.0.1-SNAPSHOT.jar
 
 
